@@ -1,77 +1,122 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <meta name="description" content="Contributions & Results: Temperature-Gradient Optical Trapping Cell and Custom-Built Optical Goniometer.">
-  <title>Contributions & Results</title>
-  <style>
-    :root{--bg:#f6f6f4;--paper:#fff;--ink:#1e2329;--muted:#68717a;--line:#dfe3e5;--accent:#ad553a;--accent-pale:#f5e9e3;--max:1120px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65}
-    button,a{font:inherit}a{color:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #4279b5;outline-offset:4px}
-    .wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.top{border-bottom:1px solid var(--line);background:rgba(255,255,255,.88)}.top-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}.brand{font-size:14px;font-weight:750;letter-spacing:.04em;text-decoration:none}.top nav{display:flex;gap:24px}.top nav a{font-size:13px;color:var(--muted);text-decoration:none}.top nav a:hover{color:var(--accent)}
-    .hero{padding:76px 0 56px;border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.18em;font-weight:750;color:var(--accent)}h1{font-size:clamp(40px,7vw,76px);letter-spacing:-.055em;line-height:1.08;margin:13px 0 0;font-weight:760}h2{font-size:clamp(27px,3.4vw,43px);line-height:1.14;letter-spacing:-.04em;margin:8px 0 20px}h3{font-size:17px;letter-spacing:-.015em;margin:0 0 9px}p{margin:0} .section{padding:60px 0 72px;border-bottom:1px solid var(--line)}.section-label{display:flex;align-items:center;gap:14px;margin:0 0 23px;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:750}.section-label .num{border:1px solid #d4b5a9;width:33px;height:33px;border-radius:50%;display:grid;place-items:center;font-variant-numeric:tabular-nums}.section-header{margin-bottom:30px}
-    .overview{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0 36px}.figure{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;padding:0;display:flex;align-items:center;justify-content:center;transition:box-shadow .18s,transform .18s}.figure:hover{box-shadow:0 12px 28px rgba(0,0,0,.08);transform:translateY(-2px)}.figure img{display:block;width:100%;height:100%;object-fit:contain}.overview .figure{height:360px;padding:20px}.overview .figure img{max-height:100%}.figure::after{content:'↗';position:absolute;bottom:12px;right:13px;border-radius:50%;background:rgba(255,255,255,.9);border:1px solid var(--line);width:30px;height:30px;display:grid;place-items:center;font-size:19px;line-height:1}
-    .content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.item{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:25px 26px}.item p,.item li{font-size:15px}.item p+p{margin-top:11px}.item strong{font-weight:750}.muted-label{display:inline-block;color:var(--accent);font-weight:760;margin-right:6px}.item ul{margin:0;padding-left:19px}.item li+li{margin-top:8px}.item.wide{grid-column:1/-1}
-    .gallery-title{font-size:12px;text-transform:uppercase;color:var(--muted);font-weight:750;letter-spacing:.13em;margin:36px 0 13px}.drawings{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.drawings .figure{height:166px;padding:8px}.goniometer-visuals{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,.75fr);gap:15px;margin-bottom:30px}.goniometer-visuals .figure{height:440px;padding:16px}.goniometer-visuals .photo{padding:0}.goniometer-visuals .photo img{object-fit:cover}.footer{padding:30px 0;color:var(--muted);font-size:13px}
-    dialog{border:0;border-radius:14px;padding:18px;background:white;max-width:min(1200px,96vw);max-height:94vh;box-shadow:0 25px 100px rgba(0,0,0,.3)}dialog::backdrop{background:rgba(9,14,20,.75)}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:9px}.modal-head strong{font-size:14px}.close{border:1px solid var(--line);border-radius:8px;background:white;padding:4px 12px;font-size:20px}.full-image{display:block;max-width:100%;max-height:80vh;object-fit:contain;margin:auto}
-    @media(max-width:720px){.wrap{width:min(100% - 26px,var(--max))}.top-inner{min-height:64px}.top nav{gap:13px}.top nav a{font-size:12px}.hero{padding:57px 0 42px}.section{padding:44px 0 55px}.overview{gap:10px}.overview .figure{height:220px;padding:8px}.content-grid{grid-template-columns:1fr}.item{padding:21px}.drawings{grid-template-columns:repeat(2,minmax(0,1fr))}.goniometer-visuals{grid-template-columns:1fr 1fr;gap:9px}.goniometer-visuals .figure{height:280px;padding:6px}.goniometer-visuals .photo{padding:0}}@media(max-width:420px){.brand{font-size:12px}.top nav{gap:9px}.overview .figure{height:180px}.goniometer-visuals{grid-template-columns:1fr}.goniometer-visuals .figure{height:295px}.goniometer-visuals .photo{height:340px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.figure{transition:none}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Contributions &amp; Results</title>
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:#191919;font-family:"Arial Narrow","Liberation Sans Narrow",Arial,sans-serif}
+  main{max-width:1200px;margin:0 auto}
+  .sheet{width:100%;aspect-ratio:16/9;position:relative;container-type:inline-size;background:white;overflow:hidden}
+  .sheet+.sheet{border-top:1px solid #a84f38}
+  .sheet-title{position:absolute;left:57.4%;top:2.75%;font-size:2.03cqw;font-weight:700;line-height:1.12;margin:0;white-space:nowrap}
+  .project-title{position:absolute;left:34.65%;top:9.9%;margin:0;color:#a3513b;font-size:1.47cqw;line-height:1.12;font-weight:700;white-space:nowrap}
+  .images-cell{position:absolute;left:1.92%;top:15.93%;width:29.95%;height:40.45%;display:flex;align-items:stretch;gap:2.8%}
+  .images-cell .drawing-first{width:36.2%}
+  .images-cell .drawing-second{width:56%}
+  .image-link{display:block;cursor:zoom-in;min-width:0;min-height:0}
+  .image-link img{display:block;width:100%;height:100%;object-fit:contain}
+  .image-link:focus-visible{outline:3px solid #2978c2;outline-offset:3px}
+  .text-cell{position:absolute;left:34.65%;top:14.85%;width:63.8%;font-size:1.37cqw;line-height:1.04}
+  .entry{position:absolute;left:0;right:0;margin:0}
+  .entry h3{font-size:1.47cqw;line-height:1.04;margin:0 0 .36cqw;font-weight:700}
+  .entry p{margin:0 0 .18cqw}
+  .indented{padding-left:4.7%}
+  .entry.cell-mod{top:0}
+  .entry.aerosol{top:11cqw}
+  .entry.frost{top:17.85cqw}
+  .drawings{position:absolute;top:62.8%;left:1.92%;width:95.64%;height:29.86%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.28%}
+  .drawings .image-link{border:1px solid #a6a6a6}
+  .drawings img{object-fit:fill}
+  .goniometer-cad{position:absolute;left:0;top:0;width:45.8%;height:55.52%}
+  .goniometer-photo{position:absolute;left:76.55%;top:3.05%;width:21.89%;height:52.52%}
+  .text-goniometer{position:absolute;left:34.65%;top:14.85%;width:43%;font-size:1.37cqw;line-height:1.04}
+  .text-goniometer .entry.optical{top:0}
+  .text-goniometer .entry.components{top:5.5cqw}
+  .text-goniometer .entry.modeling{top:11cqw}
+  .viewer{border:0;background:white;max-width:96vw;max-height:96vh;padding:12px;box-shadow:0 15px 60px #0007}
+  .viewer::backdrop{background:#000b}
+  .viewer img{display:block;max-width:calc(96vw - 24px);max-height:calc(96vh - 62px);object-fit:contain}
+  .viewer button{float:right;margin-bottom:8px;background:white;border:1px solid #aaa;border-radius:4px;padding:4px 10px;cursor:pointer}
+  @media(max-width:700px){
+    main{width:100%}
+    .sheet{aspect-ratio:auto;overflow:visible;padding:22px 16px 30px;container-type:normal}
+    .sheet-title,.project-title,.images-cell,.text-cell,.drawings,.goniometer-cad,.goniometer-photo,.text-goniometer{position:static;width:auto;height:auto;left:auto;top:auto}
+    .sheet-title{font-size:23px;white-space:normal;text-align:center;margin:0 0 24px}
+    .project-title{font-size:20px;white-space:normal;margin:0 0 18px}
+    .images-cell{display:flex;gap:12px;height:260px;justify-content:center;margin:0 0 22px}
+    .images-cell .drawing-first{width:40%}
+    .images-cell .drawing-second{width:55%}
+    .text-cell,.text-goniometer{font-size:15px;line-height:1.4}
+    .entry,.text-goniometer .entry{position:static;margin:0 0 22px}
+    .entry h3{font-size:16px;margin:0 0 5px}
+    .entry p{margin:0 0 5px}
+    .indented{padding-left:16px}
+    .drawings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0 0}
+    .drawings .image-link{aspect-ratio:1.37}
+    .goniometer-cad{display:block;margin:0 0 18px;width:100%;height:260px}
+    .goniometer-photo{display:block;width:min(70%,240px);height:310px;margin:0 auto 20px}
+    .goniometer .project-title{margin-bottom:12px}
+    .goniometer .text-goniometer{margin-top:12px}
+  }
+</style>
 </head>
 <body>
-  <header class="top"><div class="wrap top-inner"><a class="brand" href="#top">Contributions &amp; Results</a><nav aria-label="Project navigation"><a href="#cell">Optical Trapping Cell</a><a href="#goniometer">Goniometer</a></nav></div></header>
-  <main id="top">
-    <div class="hero"><div class="wrap"><div class="eyebrow">Contributions &amp; Results</div><h1>Contributions<br>&amp; Results</h1></div></div>
-    <section id="cell" class="section"><div class="wrap">
-      <div class="section-header"><div class="section-label"><span class="num">01</span> Temperature-Gradient Optical Trapping Cell</div><h2>Temperature-Gradient<br>Optical Trapping Cell</h2></div>
-      <div class="overview">
-        <button type="button" class="figure" data-image="assets/cell_model.png" data-title="Temperature-Gradient Optical Trapping Cell" aria-label="Enlarge cell model"><img src="assets/cell_model.png" alt="CAD model of the temperature-gradient cell" loading="eager"></button>
-        <button type="button" class="figure" data-image="assets/cell_assembled.png" data-title="Temperature-Gradient Optical Trapping Cell" aria-label="Enlarge assembled cell model"><img src="assets/cell_assembled.png" alt="CAD model of the modified cell with additional components" loading="eager"></button>
+<main>
+  <section class="sheet cell" aria-labelledby="cell-title">
+    <h1 class="sheet-title">Contributions &amp; Results</h1>
+    <h2 class="project-title" id="cell-title">Temperature-Gradient Optical Trapping Cell</h2>
+    <div class="images-cell">
+      <a class="image-link drawing-first" href="assets/cell_model.png" aria-label="View cell model"><img src="assets/cell_model.png" alt="Cell CAD model"></a>
+      <a class="image-link drawing-second" href="assets/cell_assembled.png" aria-label="View assembled cell"><img src="assets/cell_assembled.png" alt="Assembled cell CAD model"></a>
+    </div>
+    <div class="text-cell">
+      <div class="entry cell-mod">
+        <h3><u>Cell modification</u></h3>
+        <p>Problem: Absence of contact between parts of the cell.</p>
+        <p class="indented">Limitation of the vertical working range due to the optical lenses coming into contact with window mounts.</p>
+        <p>Solution: Changing an internal air channel to improve the contact between parts of the cell.</p>
+        <p class="indented">Relocating window mounts to increase the vertical working range from 19 to 25 mm, while maintaining the same cell height</p>
+        <p class="indented">Prepared detailed manufacturing drawings for the mechanical workshop.</p>
       </div>
-      <div class="content-grid">
-        <article class="item wide"><h3>Cell modification</h3><p><span class="muted-label">Problem:</span> Absence of contact between parts of the cell.<br>Limitation of the vertical working range due to the optical lenses coming into contact with window mounts.</p><p><span class="muted-label">Solution:</span> Changing an internal air channel to improve the contact between parts of the cell.<br>Relocating window mounts to increase the vertical working range from 19 to 25 mm, while maintaining the same cell height.<br>Prepared detailed manufacturing drawings for the mechanical workshop.</p></article>
-        <article class="item"><h3>Aerosol Stability</h3><p><span class="muted-label">Problem:</span> Incoming humid airflow disturbed the trapped aerosol.</p><p><span class="muted-label">Solution:</span> 3D-printed airflow diffuser with lateral outlets that redirected incoming humid air laterally rather than directly toward the trapped aerosol.</p></article>
-        <article class="item"><h3>Frost Prevention</h3><p><span class="muted-label">Problem:</span> Frost formation outside of the lower cold part of the cell and optical windows.</p><p><span class="muted-label">Solution:</span> Custom 3D-printed protective components to thermally shield the cold lower section of the cell and an external dry-air distribution system for windows.</p></article>
+      <div class="entry aerosol">
+        <h3><u>Aerosol Stability</u></h3>
+        <p>Problem: Incoming humid airflow disturbed the trapped aerosol.</p>
+        <p>Solution: 3D-printed airflow diffuser with lateral outlets that redirected incoming humid air laterally rather than directly toward the trapped aerosol.</p>
       </div>
-      <div class="gallery-title">Manufacturing drawings</div>
-      <div class="drawings">
-        <button type="button" class="figure" data-image="assets/drawing_01.png" data-title="Manufacturing drawing" aria-label="Enlarge manufacturing drawing 1"><img src="assets/drawing_01.png" alt="Manufacturing drawing 1" loading="lazy"></button>
-        <button type="button" class="figure" data-image="assets/drawing_02.png" data-title="Manufacturing drawing" aria-label="Enlarge manufacturing drawing 2"><img src="assets/drawing_02.png" alt="Manufacturing drawing 2" loading="lazy"></button>
-        <button type="button" class="figure" data-image="assets/drawing_03.jpg" data-title="Manufacturing drawing" aria-label="Enlarge manufacturing drawing 3"><img src="assets/drawing_03.jpg" alt="Manufacturing drawing 3" loading="lazy"></button>
-        <button type="button" class="figure" data-image="assets/drawing_04.png" data-title="Manufacturing drawing" aria-label="Enlarge manufacturing drawing 4"><img src="assets/drawing_04.png" alt="Manufacturing drawing 4" loading="lazy"></button>
+      <div class="entry frost">
+        <h3><u>Frost Prevention</u></h3>
+        <p>Problem: Frost formation outside of the lower cold part of the cell and optical windows.</p>
+        <p>Solution: Custom 3D-printed protective components to thermally shield the cold lower section of the cell and an external dry-air distribution system for windows.</p>
       </div>
-    </div></section>
-    <section id="goniometer" class="section"><div class="wrap">
-      <div class="section-header"><div class="section-label"><span class="num">02</span> Custom-Built Optical Goniometer</div><h2>Custom-Built<br>Optical Goniometer</h2></div>
-      <div class="goniometer-visuals">
-        <button type="button" class="figure" data-image="assets/goniometer_cad.jpg" data-title="Custom-Built Optical Goniometer" aria-label="Enlarge goniometer CAD model"><img src="assets/goniometer_cad.jpg" alt="CAD model of the custom-built optical goniometer" loading="lazy"></button>
-        <button type="button" class="figure photo" data-image="assets/goniometer_photo.jpg" data-title="Custom-Built Optical Goniometer" aria-label="Enlarge goniometer photograph"><img src="assets/goniometer_photo.jpg" alt="Photograph of the optical goniometer" loading="lazy"></button>
-      </div>
-      <div class="content-grid">
-        <article class="item"><h3>Optical and Mechanical Configuration</h3><p>Adapted a published goniometer concept into a practical experimental setup.</p><p>Developed the mechanical layout and component arrangement.</p></article>
-        <article class="item"><h3>Component Selection and Integration</h3><p>Selected commercially available optomechanical components.</p><p>Combined standard components with custom-designed, 3D-printed parts.</p></article>
-        <article class="item wide"><h3>3D Modeling and Prototyping</h3><p>Designed custom components required for mechanical integration.</p></article>
-      </div>
-    </div></section>
-  </main>
-  <footer class="footer"><div class="wrap">Contributions &amp; Results</div></footer>
-  <dialog id="viewer" aria-label="Expanded image"><div class="modal-head"><strong id="viewerTitle"></strong><button class="close" id="closeViewer" type="button" aria-label="Close enlarged image">×</button></div><img class="full-image" id="viewerImage" alt=""></dialog>
-  <script>
-    const viewer = document.getElementById('viewer');
-    const viewerImage = document.getElementById('viewerImage');
-    const viewerTitle = document.getElementById('viewerTitle');
-    document.querySelectorAll('[data-image]').forEach(button => {
-      button.addEventListener('click', () => {
-        viewerImage.src = button.dataset.image;
-        viewerImage.alt = button.querySelector('img').alt;
-        viewerTitle.textContent = button.dataset.title;
-        viewer.showModal();
-      });
-    });
-    document.getElementById('closeViewer').addEventListener('click', () => viewer.close());
-    viewer.addEventListener('click', event => {if(event.target === viewer) viewer.close();});
-  </script>
+    </div>
+    <div class="drawings">
+      <a class="image-link" href="assets/drawing_01.png" aria-label="View first technical drawing"><img src="assets/drawing_01.png" alt="Technical drawing"></a>
+      <a class="image-link" href="assets/drawing_02.png" aria-label="View second technical drawing"><img src="assets/drawing_02.png" alt="Technical drawing"></a>
+      <a class="image-link" href="assets/drawing_03.jpg" aria-label="View third technical drawing"><img src="assets/drawing_03.jpg" alt="Technical drawing"></a>
+      <a class="image-link" href="assets/drawing_04.png" aria-label="View fourth technical drawing"><img src="assets/drawing_04.png" alt="Technical drawing"></a>
+    </div>
+  </section>
+  <section class="sheet goniometer" aria-labelledby="goniometer-title">
+    <h2 class="project-title" id="goniometer-title">Custom-Built Optical Goniometer</h2>
+    <a class="image-link goniometer-cad" href="assets/goniometer_cad.jpg" aria-label="View goniometer CAD model"><img src="assets/goniometer_cad.jpg" alt="Goniometer CAD model"></a>
+    <a class="image-link goniometer-photo" href="assets/goniometer_photo.jpg" aria-label="View goniometer photo"><img src="assets/goniometer_photo.jpg" alt="Goniometer photograph"></a>
+    <div class="text-goniometer">
+      <div class="entry optical"><h3>Optical and Mechanical Configuration</h3><p>Adapted a published goniometer concept into a practical experimental setup.</p><p>Developed the mechanical layout and component arrangement.</p></div>
+      <div class="entry components"><h3>Component Selection and Integration</h3><p>Selected commercially available optomechanical components.</p><p>Combined standard components with custom-designed, 3D-printed parts.</p></div>
+      <div class="entry modeling"><h3>3D Modeling and Prototyping</h3><p>Designed custom components required for mechanical integration.</p></div>
+    </div>
+  </section>
+</main>
+<dialog class="viewer" id="viewer" aria-label="Enlarged image"><button type="button" id="close-viewer" aria-label="Close enlarged image">Close ×</button><img alt="" id="large-image"></dialog>
+<script>
+const viewer=document.getElementById('viewer'),large=document.getElementById('large-image');
+document.querySelectorAll('a.image-link').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();large.src=a.getAttribute('href');large.alt=a.querySelector('img').alt;viewer.showModal()}));
+document.getElementById('close-viewer').addEventListener('click',()=>viewer.close());
+viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});
+</script>
 </body>
 </html>
